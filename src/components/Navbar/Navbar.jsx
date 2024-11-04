@@ -66,7 +66,7 @@ const Navbar = () => {
                     <h2 className='text-2xl font-semibold'>Company Name</h2></Link>
                 </div>
                 <div className='flex gap-3 items-center font-noto text-zinc-800 dark:text-white'>
-                    <Link className='text-sm duration-300 py-3 px-2 opacity-70  hover:opacity-100'>Work</Link>
+                    <Link  to="/work" className='text-sm duration-300 py-3 px-2 opacity-70  hover:opacity-100'>Work</Link>
                     <Link className='text-sm duration-300 py-3 px-2 opacity-70  hover:opacity-100'>About Us</Link>
                     <Link to="/profile_A" className='text-sm duration-300 py-3 px-2 opacity-70  hover:opacity-100'>Profile</Link>
                     <label

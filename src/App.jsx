@@ -9,6 +9,7 @@ import Profile_Emp from "./components/Profile_Emp/Profile_Emp"
 import Department from "./components/Homepage/Department/Department"
 import EmployeeData from "./components/Homepage/EmployeeData/EmployeeData"
 import DepartmentData from "./components/Homepage/Department/DepartmentData"
+import Work from "./components/Work/Work"
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
           {/* ADD */}
           <Route path="/newMember" element={<><Member /></>}/>
           <Route path="/createDepartment" element={<><Department /></>}/>
+
+          {/* WORK */}
+          <Route path='/work' element= {<><Navbar /><Work /></>} />
 
           {/* DATA */}
           <Route path="/empData" element={<><Navbar /><EmployeeData /></>} />
