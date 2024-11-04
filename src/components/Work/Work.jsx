@@ -19,9 +19,9 @@ const Work = () => {
                 <div>
                     <h2>Work Status</h2>
                 </div>
-                <div className='w-full bg-blue-300'>
-                    <table className='bg-red-300 flex flex-col items-center justify-center px-5 py-2'>
-                        <thead className='bg-blue-300 w-full'>
+                <div className='w-full '>
+                    <table className='flex flex-col items-center justify-center px-5 py-2'>
+                        <thead className='w-full'>
                             <tr >
                                 <td>Sr No.</td>
                                 <td>Name</td>
@@ -32,7 +32,7 @@ const Work = () => {
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>Ritika Shrotri</td>
+                                <td>Puneet SuperStart</td>
                                 <td>Ok</td>
                                 <td>10.20 am</td>
                             </tr>
