@@ -8,10 +8,11 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 
 const api = import.meta.env.VITE_API_KEY;
 console.log(api)
+console.log(import.meta.env)
 
 const firebaseConfig = {
-  // apiKey: api,
-  apiKey: "AIzaSyB7E1i9W3ne5_nbGd3opiZ_Ws-HB6Atbe8",
+  apiKey: api,
+  // apiKey: "",
   authDomain: "employee-management-30557.firebaseapp.com",
   projectId: "employee-management-30557",
   storageBucket: "employee-management-30557.appspot.com",
