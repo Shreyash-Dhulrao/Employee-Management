@@ -10,7 +10,8 @@ const api = import.meta.env.VITE_API_KEY;
 console.log(api)
 
 const firebaseConfig = {
-  apiKey: api,
+  // apiKey: api,
+  apiKey: "AIzaSyB7E1i9W3ne5_nbGd3opiZ_Ws-HB6Atbe8",
   authDomain: "employee-management-30557.firebaseapp.com",
   projectId: "employee-management-30557",
   storageBucket: "employee-management-30557.appspot.com",
