@@ -24,15 +24,40 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-const signUp = async (email, password) => {
+const signUp = async (Fname, Lname, email, password) => {
   try {
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     const user = userCredential.user
-    console.log(user);
+    const data = 
+      {Fname,
+        Lname,
+        email,
+        password
+      }
+    AdminData(data)
+    console.log(password)
   } catch (error) {
     console.error("Error during sign-up:", error.message);
   }
 };
+
+const AdminData = async (data) => {
+  console.log(data)
+  try {
+    const newAdmin = doc(db, 'Admin', data.email);
+    await setDoc(newAdmin, {
+      firstname: data.Fname,
+      lastname: data.Lname,
+      email: data.email,
+      password: data.password
+    })
+  } catch (error) {
+    console.error('Error adding document: ', error);
+    alert('Failed to save employee data.');
+  }
+}
+
+
 
 const signIn = async (email, password) => {
   try {
@@ -135,5 +160,6 @@ const exportDash = async () => {
     console.log(error)
   }
 }
+
 
 export { signUp, signIn, auth, logout, addUser, exportUser , Dashboard , exportDash }

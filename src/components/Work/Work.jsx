@@ -20,8 +20,8 @@ const Work = () => {
                     <h2>Work Status</h2>
                 </div>
                 <div className='w-full '>
-                    <table className='flex flex-col items-center justify-center px-5 py-2'>
-                        <thead className='w-full'>
+                    <table className='flex flex-col w-full px-5 py-2 bg-red-300'>
+                        <thead >
                             <tr >
                                 <td>Sr No.</td>
                                 <td>Name</td>

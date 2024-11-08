@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { auth, logout } from '../../firebase/Firebase'
+import imgCropper from '../Employees/ImageCrop'
 
 
 const Profile_A = () => {
@@ -14,7 +15,15 @@ const Profile_A = () => {
     }
   return (
     <div>
+        <div className='w-full bg-blue-300 p-5'>
+          <Link to="/">Homepage</Link>
+        </div>
         <div>
+          <div>
+            
+          </div>
+        </div>
+        <div className='bg-red-300'>
             <button onClick={handleLogout}>Logout Admin</button>
         </div>
     </div>
