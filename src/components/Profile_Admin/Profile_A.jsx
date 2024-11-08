@@ -5,6 +5,7 @@ import imgCropper from '../Employees/ImageCrop'
 
 
 const Profile_A = () => {
+      console.log(auth.currentUser)
     const navigate = useNavigate()
     const handleLogout = () => {
       logout(auth)
@@ -13,10 +14,11 @@ const Profile_A = () => {
       window.location.href = "/";
       window.location.reload();
     }
+    
   return (
     <div>
         <div className='w-full bg-blue-300 p-5'>
-          <Link to="/">Homepage</Link>
+          <Link to="/homepage">Homepage</Link>
         </div>
         <div>
           <div>

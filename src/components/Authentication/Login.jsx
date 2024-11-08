@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, Navigate, replace, useLocation, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { signIn } from '../../firebase/Firebase'
 import { auth } from '../../firebase/Firebase'
 import { onAuthStateChanged } from 'firebase/auth'
@@ -13,8 +13,6 @@ const Login = () => {
   const [newState, setnewState] = useState(false)
   const navigate = useNavigate();
   const location = useLocation()
-
-  const relocate = location.state?.path || '/homepage'
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {

@@ -6,9 +6,6 @@ import Icon_1 from '../../assets/Images/Icons/TotalEmp.png'
 import Icon_2 from '../../assets/Images/Icons/Department.png'
 import Icon_3 from '../../assets/Images/Icons/Work.png'
 import Icon_4 from '../../assets/Images/Icons/Attendance.png'
-import Icon_5 from '../../assets/Images/Icons/plus.png'
-import DepartmentData from './Department/DepartmentData'
-import EmployeeData from './EmployeeData/EmployeeData'
 
 const Homepage = () => {
   const [currentVal, setcurrentVal] = useState("")
@@ -31,20 +28,6 @@ const Homepage = () => {
     fetchEmployees();
     fetchDashboard()
   }, []);
-
-  const [search, setsearch] = useState("")
-
-  const handleSearch = (e) => {
-    e.preventDefault();
-    console.log(search.toLowerCase());
-    if(search == "") return ;
-    else {
-      const data = totalEmp.filter((items)=> {
-        return items.name.toLowerCase().includes(search.toLowerCase)
-      })
-      console.log(data)
-    }
-  }
 
   const buttons = [
     {
